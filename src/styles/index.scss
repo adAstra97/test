@@ -1,0 +1,71 @@
+@import './fonts.scss';
+@import './reset.scss';
+@import './variables.scss';
+
+@import './header.scss';
+@import './hero.scss';
+@import './footer.scss';
+
+html {
+   font-size: 62.5%;
+}
+
+html, body {
+   min-height: 100vh;
+}
+
+.site {
+   min-height: 100vh;
+   font-family: $main-font;
+   background-color: $dark-blue-color;
+   padding-top: 16px;
+   overflow: hidden;
+}
+
+.container {
+   max-width: 1670px;
+   margin: 0 auto;
+   padding: 0 15px;
+}
+
+.menu {
+   font-size: 1.6rem;
+   line-height: 1.25;
+
+   &__link {
+      color: $white-color;
+      transition: color 0.3s ease-out;
+
+      &:hover {
+         color: $blue-color;
+      }
+   }
+}
+
+.decor-1 {
+   position: absolute;
+   left: 0;
+   z-index: 2;
+
+   @media (max-width: 1200px) {
+      top: 20%;
+      transform: translateY(-50%);
+   }
+}
+
+.decor-2 {
+   position: absolute;
+   right: 0;
+   z-index: 2;
+
+   @media (max-width: 1200px) {
+      transform: translateY(50%);
+   }
+}
+
+.gradient {
+   z-index: 1;
+   position: absolute;
+   inset: 0;
+   background: linear-gradient(0deg, rgb(0, 0, 0, 0.9) 0, rgba(0, 0, 0, 0.1) 50%, rgb(0, 0, 0, 0.4) 100%);
+}
