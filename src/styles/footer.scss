@@ -3,7 +3,7 @@
    border-top: 4px solid $blue-color;
    border-left: 4px solid $blue-color;
    max-height: 140px;
-   background: var(--main-deep-blue-1-e-1231, #1E1231);
+   background: $dark-blue-color;
    position: relative;
    z-index: 2;
 
@@ -21,12 +21,24 @@
       @media (max-width: 1300px) {
          flex-direction: column;
          align-items: center;
+         padding: 40px 0 20px;
          gap: 30px;
+      }
+
+      @media (max-width: 570px) {
+         padding: 20px;
+         gap: 20px;
+         align-items: flex-start;
       }
 
       .menu {
          display: flex;
          gap: 40px;
+
+         @media (max-width: 570px) {
+            flex-direction: column;
+            gap: 5px;
+         }
 
          &__link:hover {
             text-decoration-line: underline;
@@ -46,9 +58,19 @@
             align-items: center;
          }
 
+         @media (max-width: 570px) {
+            align-items: flex-start;
+            width: 100%;
+
+         }
+
          .contacts {
             display: flex;
             gap: 8px;
+
+            @media (max-width: 570px) {
+               text-align: center;
+            }
 
 
             &__link:hover svg path:first-child {

@@ -8,26 +8,23 @@
       align-items: center;
       min-height: 95vh;
       padding: 40px 0;
-      position: relative;
-      z-index: 2;
 
       @media (max-width: 1200px) {
          flex-direction: column;
-         gap: 30vh;
-         padding: 10vh 0;
+         gap: 45vh;
+         padding: 10vh 0 20vh;
       }
    }
 
    &__text {
       line-height: 1;
       font-weight: 500;
-      position: relative;
-      z-index: 20;
 
       @media (max-width: 1200px) {
          display: flex;
          flex-direction: column;
          align-items: center;
+         text-align: center;
       }
 
       h1 {
@@ -35,8 +32,9 @@
          font-size: 9.6rem;
          margin-bottom: 24px;
 
-         @media (max-width: 1200px) {
-            text-align: center;
+         @media (max-width: 570px) {
+            font-size: 5.8rem;
+            line-height: 1.1;
          }
 
          span {
@@ -50,6 +48,10 @@
          margin-bottom: 48px;
          color: $white-color;
          opacity: 0.6;
+
+         @media (max-width: 570px) {
+            margin-bottom: 24px;
+         }
       }
    }
 
@@ -92,6 +94,16 @@
       transform: translateX(50%);
       display: flex;
       gap: 17px;
+
+      @media (max-width: 1200px) {
+         transform: rotate(90deg) translateX(25vh);
+         right: 15%;
+         bottom: 50%;
+      }
+
+      @media (max-width: 700px) {
+         transform: rotate(90deg) translateX(25vh) scale(0.6);
+      }
 
       .left, .center, .right {
          display: flex;
@@ -139,6 +151,12 @@
          padding-right: 16px;
          box-sizing: border-box;
 
+         @media (max-width: 570px) {
+            padding-right: 10px;
+            border-radius: 50px;
+            font-size: 2.0rem;
+         }
+
          &__inner {
             padding: 24px 16px 24px 24px;
             max-height: 595px;
@@ -146,10 +164,19 @@
             scroll-behavior: smooth;
             padding-right: 16px;
 
+            @media (max-width: 570px) {
+               max-height: 450px;
+               padding: 10px;
+            }
+
             &::-webkit-scrollbar-track {
                background-color: rgba($color: $white-color, $alpha: 0.12);
                width: 30px;
                margin: 100px 16px;
+
+               @media (max-width: 570px) {
+                  margin: 50px 10px;
+               }
             }
 
             &::-webkit-scrollbar {
@@ -175,8 +202,20 @@
             cursor: pointer;
             transition: background-color 0.3s ease-out;
 
+            @media (max-width: 700px) {
+               padding: 15px 35px;
+            }
+
+            @media (max-width: 570px) {
+               border-radius: 40px;
+            }
+
             &:not(:last-child) {
                margin-bottom: 17px;
+
+               @media (max-width: 570px) {
+                  margin-bottom: 10px;
+               }
             }
 
             &:hover {
